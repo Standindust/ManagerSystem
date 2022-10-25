@@ -1,0 +1,1 @@
+update Employees set EmpId='01010401',EmpName='ren',Sex='ann',Nationality='china',Birth='2005-12-12',Academic='fasd',Marital='asdfasd',Original='asdf',Id_Card='32',Mobile='asdfasd',Memo='asdf',DepId='asdf' where  EmpId='1';
