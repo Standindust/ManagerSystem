@@ -37,7 +37,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
 {
     session.removeAttribute("UserName");
     session.removeAttribute("UserType");
-	response.sendRedirect("../login/login_exit.jsp");
+	response.sendRedirect("login/login_exit.jsp");
 }
 %>
 
@@ -280,7 +280,7 @@ The Merchandise Sale Department
     <td><%=rs.getString("NowPrice")%></td>
     <td><%=rs.getString("Quantity")%></td>
     <td><%=rs.getString("Memo")%></td>	
-    <td><a href="product_allinfor_edit.jsp?Add=<%=rs.getString("ProId")%>">&nbsp;选择购买&nbsp;</a></td>
+    <td><a href="product_allinfor_edit.jsp?Add=<%=rs.getString(">&nbsp;选择购买&nbsp;</a></td>
   </tr>
 <%
 				i++;
@@ -291,7 +291,7 @@ The Merchandise Sale Department
 
 
 </table>
-<form method="get" action="product_allinfor_edit.jsp">
+<form method=" get" action="product_allinfor_edit.jsp">
 <a href="product_allinfor_edit.jsp">返回</a>
 共<%=totalpage%>页&nbsp;
 <%

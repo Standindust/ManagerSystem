@@ -178,7 +178,7 @@ YanShan.University
                 <td height="27" width="46">&nbsp;</td>
                 <td height="27" width="130"><b>
 <!--Button4.Link-->
-<a href="../login/login_update_query.jsp">
+<a href="../login_update_query.jsp">
 				<font color="#FFFFFF">
 				<span class="text">
 <!--Button4-->
@@ -199,7 +199,7 @@ YanShan.University
                 <td height="27" width="46">&nbsp;</td>
                 <td height="27" width="130"><b>
 <!--Button5.Link-->
-<a href="../login/login_exit.jsp">
+<a href="../login_exit.jsp">
 				<font color="#000000">
 				<span class="text">
 				<font color="#FFFFFF">
@@ -387,21 +387,7 @@ YanShan.University
         <tr> 
           <td> 
             <div align="center"><font color="#FFFFFF">
-<!--Your Company Name-->
-任晓明毕业设计——
-<!--TCopyRight-->
- 版权所有
-@2006<br>
-<!--TAddress-->
-公司地址:ysu
-<!--Address-->
-<br>
-<!--TTelephone-->
-电话:
-<!--Telephone-->
-<!--TEMail-->
- 电子邮件:ren@126.com
-<!--EMail-->
+
 <A HREF='mailto:
 <!--Email-->
 

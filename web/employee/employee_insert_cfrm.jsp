@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=gb2312" %>
+<%@ page contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8" %>
 <%@ page import="java.util.*" %>
 <%@ page import="employees.*" %>
 <%@ page import="java.util.Properties" %>
@@ -13,7 +13,7 @@
 Template
 </TITLE>
 <!--CharSet-->
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 <link rel="stylesheet" href="employee_images/CSS.CSS" type="text/css">
 <style type="text/css">
 <!--
@@ -34,8 +34,8 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
 {
     session.removeAttribute("UserName");
     session.removeAttribute("UserType");
-	response.sendRedirect("../login/index.jsp");
-	//³¬¼¶¹ÜÀíÔ±Ò³Ãæ
+	response.sendRedirect("login/index.jsp");
+	//è¶…çº§ç®¡ç†å‘˜é¡µé¢
 }
 %>
 
@@ -56,7 +56,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
           <td height="30" width="408"> 
             <div align="center"><font color="#FFFFFF"><b><font size="5">
 <!--Your Company Name-->
-ÆóÒµÈËÁ¦×ÊÔ´²¿¡ª¡ªÔ±¹¤ĞÅÏ¢¹ÜÀí 
+ä¼ä¸šäººåŠ›èµ„æºéƒ¨â€•â€•å‘˜å·¥ä¿¡æ¯ç®¡ç† 
               </font></b></font></div>
           </td>
           <td height="30" width="170">&nbsp;</td>
@@ -97,7 +97,7 @@ Human Resource Department
 
 <a href="../menu_index/personnael_department_index.jsp">
 
-Ê×Ò³</a></b> </div></td>
+é¦–é¡µ</a></b> </div></td>
               </tr>
             </table>
 
@@ -109,7 +109,7 @@ Human Resource Department
 <!--Button1.Link-->
 <a href="../menu_index/personnael_department_index.jsp">
 <!--Button1-->
-ÈËÊÂ²¿ĞÅÏ¢¹ÜÀí</a></b> </div>
+äººäº‹éƒ¨ä¿¡æ¯ç®¡ç†</a></b> </div>
                 </td>
               </tr>
             </table>
@@ -123,7 +123,7 @@ Human Resource Department
 <!--Button2.Link-->
 <a href="employees_all_infor_page.jsp">
 <!--Button2-->
-ËùÓĞÔ±¹¤ĞÅÏ¢ </a></b></div>
+æ‰€æœ‰å‘˜å·¥ä¿¡æ¯ </a></b></div>
                 </td>
               </tr>
             </table>
@@ -137,7 +137,7 @@ Human Resource Department
 <!--Button3.Link-->
 <a href="employee_insert.jsp">
 <!--Button3-->
-Ô±¹¤ĞÅÏ¢Ìí¼Ó </a></b></div>
+å‘˜å·¥ä¿¡æ¯æ·»åŠ  </a></b></div>
                 </td>
               </tr>
             </table>
@@ -151,7 +151,7 @@ Human Resource Department
 <!--Button4.Link-->
 <a href="employee_delete.jsp">
 <!--Button4-->
-µ¥¸öÔ±¹¤É¾³ı </a></b></div>
+å•ä¸ªå‘˜å·¥åˆ é™¤ </a></b></div>
                 </td>
               </tr>
             </table>
@@ -164,7 +164,7 @@ Human Resource Department
 <!--Button4.Link-->
 <a href="employees_many_del.jsp">
 <!--Button4-->
-¶à¸öÔ±¹¤É¾³ı </a></b></div>
+å¤šä¸ªå‘˜å·¥åˆ é™¤ </a></b></div>
                 </td>
               </tr>
             </table>
@@ -178,7 +178,7 @@ Human Resource Department
 <!--Button5.Link-->
 <a href="employee_update.jsp">
 <!--Button5-->
-Ô±¹¤ĞÅÏ¢ĞŞ¸Ä</a></b></div>
+å‘˜å·¥ä¿¡æ¯ä¿®æ”¹</a></b></div>
                 </td>
               </tr>
             </table>
@@ -190,7 +190,7 @@ Human Resource Department
                   <div align="center"><b>
 <!--Button6.Link-->
 <a href="query_employee.jsp">
-<!--Button6-->Ô±¹¤ĞÅÏ¢²éÑ¯</a></b></div>
+<!--Button6-->å‘˜å·¥ä¿¡æ¯æŸ¥è¯¢</a></b></div>
                 </td>
               </tr>
             </table>
@@ -203,7 +203,7 @@ Human Resource Department
 <!--Button6.Link-->
 <a href="../login/login_exit.jsp">
 <!--Button6-->
-ÍË³öÏµÍ³</a></b></div>
+é€€å‡ºç³»ç»Ÿ</a></b></div>
                 </td>
               </tr>
             </table>
@@ -238,66 +238,76 @@ String Original = request.getParameter("Original");
 String Id_Card = request.getParameter("Id_Card");
 String Mobile = request.getParameter("Mobile");
 String Memo = request.getParameter("Memo");
-//String DepId = request.getParameter("DepId");	
+//String DepId = request.getParameter("DepId");
 
 %>
 
-<%      
+<%
         String DepId=null;
         int bumen = Integer.parseInt(request.getParameter("bumen"));
         switch(bumen)
         {
          case 1:
-			DepId="01";
-           // out.println("ÈËÁ¦×ÊÔ´²¿¸ºÔğÈË");
-		  //  out.println("DepId="+DepId);	  
-           break;	   	   
-         case 2:	  
-		   DepId="02";
-         //  out.println("ÉÌÆ·ÏúÊÛ²¿¸ºÔğÈË");
-		 //  out.println("DepId="+DepId);	  
-           break;	   
-         case 3:  
-		   DepId="03";
-         //  out.println("ÉÌÆ·²É¹º²¿");   
-		 //  out.println("DepId="+DepId);	  
-           break;	   
+			DepId="hotel.RommServer";
+           // out.println("äººåŠ›èµ„æºéƒ¨è´Ÿè´£äºº");
+		  //  out.println("DepId="+DepId);
+           break;
+         case 2:
+		   DepId="hotel.HR";
+         //  out.println("å•†å“é”€å”®éƒ¨è´Ÿè´£äºº");
+		 //  out.println("DepId="+DepId);
+           break;
+         case 3:
+		   DepId="hotel.Wel";
+         //  out.println("å•†å“é‡‡è´­éƒ¨");
+		 //  out.println("DepId="+DepId);
+           break;
 		 case 4:
-			DepId="04";
-         //   out.println("¹«Ë¾²ÆÎñ²¿");
-		 //   out.println("DepId="+DepId);	  
-           break;	      
-         case 5:	  
+			DepId="hotel.Cleaner";
+         //   out.println("å…¬å¸è´¢åŠ¡éƒ¨");
+		 //   out.println("DepId="+DepId);
+           break;
+         case 5:
 		   DepId="05";
-         //  out.println("ÆóÒµ¹æ»®²¿");
-		 //  out.println("DepId="+DepId);	  
-           break;	
-		  case 6:	  
+         //  out.println("ä¼ä¸šè§„åˆ’éƒ¨");
+		 //  out.println("DepId="+DepId);
+           break;
+		  case 6:
 		   DepId="06";
-        //   out.println("ÆóÒµÆäËû²¿ÃÅ");
-		 //  out.println("DepId="+DepId);	  
-           break;   
+        //   out.println("ä¼ä¸šå…¶ä»–éƒ¨é—¨");
+		 //  out.println("DepId="+DepId);
+           break;
          default:
         //   out.println("error");
-           break;   
-        } 
+           break;
+        }
+%>
+ <jsp:useBean id="face" scope="page" class="hotel.control.FaceCollection"/>
+ <%
+
+ face.active(String.valueOf(bumen),Id_Card,DepId);
+String faceinfo="1";
+ face.trainall();
+
+
 %>
 <jsp:useBean id="employeesbean" scope="session" class="employees.EmployeesBean"/>
-<% 
+<%
+
 int nResult=0;  
-   nResult=employeesbean.InsertEmployees(EmpId,EmpName,Sex,Nationality,Birth,Academic,Marital,Original,Id_Card,Mobile,Memo,DepId);
+   nResult=employeesbean.InsertEmployees(EmpId,EmpName,Sex,Nationality,Birth,Academic,Marital,Original,Id_Card,Mobile,Memo,DepId,faceinfo);
     if(nResult==1)
     { 
-     out.println("Ìí¼Ó³É¹¦");
+     out.println("æ·»åŠ æˆåŠŸ");
 	 }
 	 else{
 	       if(nResult==2)
             { 
-           out.println("Ìí¼ÓÊ§°Ü£¡ÒòÎª´æÔÚÖØ¸´Êı¾İ");
+           out.println("æ·»åŠ å¤±è´¥ï¼å› ä¸ºå­˜åœ¨é‡å¤æ•°æ®");
 	         }
       	 else
         	 {
-        	 out.println("Ìí¼ÓÊ§°Ü£¡Êı¾İ¿âÒì³££¡");
+        	 out.println("æ·»åŠ å¤±è´¥ï¼æ•°æ®åº“å¼‚å¸¸ï¼");
         	 }
 	 }
  %>		
@@ -317,21 +327,7 @@ int nResult=0;
               <tr> 
                 <td> 
                   <div align="center"> 
-<!--Your Company Name-->
-ÈÎÏşÃ÷±ÏÒµÉè¼Æ¡ª¡ª
-<!--TCopyRight-->
- °æÈ¨ËùÓĞ
-@2006<br>
-<!--TAddress-->
-¹«Ë¾µØÖ·:YSU
-<!--Address-->
-<br>
-<!--TTelephone-->
-µç»°:
-<!--Telephone-->
-<!--TEMail-->
- µç×ÓÓÊ¼ş:ren@126.com
-<!--EMail-->
+
 <A HREF='mailto:
 <!--Email-->
 

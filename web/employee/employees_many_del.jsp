@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=gb2312" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.*" %>
 <%@ page import="employees.*" %>
 <%@ page errorPage="errorpage.jsp" %>
@@ -14,7 +14,7 @@
 Template
 </TITLE>
 <!--CharSet-->
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 <link rel="stylesheet" href="employee_images/CSS.CSS" type="text/css">
 <style type="text/css">
 <!--
@@ -34,7 +34,7 @@ function window_onload() {
 function linkcheck()
 {  
 	
-	if( confirm("ÄúÈ·¶¨ÒªÉ¾³ı¸ÃÔ±¹¤Âğ ?") )
+	if( confirm("æ‚¨ç¡®å®šè¦åˆ é™¤è¯¥å‘˜å·¥å— ?") )
 	{	
 		return true;
 	}
@@ -51,8 +51,8 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
 {
     session.removeAttribute("UserName");
     session.removeAttribute("UserType");
-	response.sendRedirect("../login/index.jsp");
-	//³¬¼¶¹ÜÀíÔ±Ò³Ãæ
+	response.sendRedirect("login/index.jsp");
+	//è¶…çº§ç®¡ç†å‘˜é¡µé¢
 }
 %>
 
@@ -73,7 +73,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
           <td height="30" width="408"> 
             <div align="center"><font color="#FFFFFF"><b><font size="5">
 <!--Your Company Name-->
-ÆóÒµÈËÁ¦×ÊÔ´²¿¡ª¡ªÔ±¹¤ĞÅÏ¢¹ÜÀí 
+ä¼ä¸šäººåŠ›èµ„æºéƒ¨â€•â€•å‘˜å·¥ä¿¡æ¯ç®¡ç† 
               </font></b></font></div>
           </td>
           <td height="30" width="170">&nbsp;</td>
@@ -114,7 +114,7 @@ Human Resource Department
 
 <a href="../menu_index/personnael_department_index.jsp">
 
-Ê×Ò³</a></b> </div></td>
+é¦–é¡µ</a></b> </div></td>
               </tr>
             </table>
 
@@ -126,7 +126,7 @@ Human Resource Department
 <!--Button1.Link-->
 <a href="../menu_index/personnael_department_index.jsp">
 <!--Button1-->
-ÈËÊÂ²¿ĞÅÏ¢¹ÜÀí</a></b> </div>
+äººäº‹éƒ¨ä¿¡æ¯ç®¡ç†</a></b> </div>
                 </td>
               </tr>
             </table>
@@ -140,7 +140,7 @@ Human Resource Department
 <!--Button2.Link-->
 <a href="employees_all_infor_page.jsp">
 <!--Button2-->
-ËùÓĞÔ±¹¤ĞÅÏ¢ </a></b></div>
+æ‰€æœ‰å‘˜å·¥ä¿¡æ¯ </a></b></div>
                 </td>
               </tr>
             </table>
@@ -154,7 +154,7 @@ Human Resource Department
 <!--Button3.Link-->
 <a href="employee_insert.jsp">
 <!--Button3-->
-Ô±¹¤ĞÅÏ¢Ìí¼Ó </a></b></div>
+å‘˜å·¥ä¿¡æ¯æ·»åŠ  </a></b></div>
                 </td>
               </tr>
             </table>
@@ -168,7 +168,7 @@ Human Resource Department
 <!--Button4.Link-->
 <a href="employee_delete.jsp">
 <!--Button4-->
-µ¥¸öÔ±¹¤É¾³ı </a></b></div>
+å•ä¸ªå‘˜å·¥åˆ é™¤ </a></b></div>
                 </td>
               </tr>
             </table>
@@ -181,7 +181,7 @@ Human Resource Department
 <!--Button4.Link-->
 <a href="employees_many_del.jsp">
 <!--Button4-->
-Ô±¹¤ÅúÁ¿É¾³ı </a></b></div>
+å‘˜å·¥æ‰¹é‡åˆ é™¤ </a></b></div>
                 </td>
               </tr>
             </table>
@@ -195,7 +195,7 @@ Human Resource Department
 <!--Button5.Link-->
 <a href="employee_update.jsp">
 <!--Button5-->
-Ô±¹¤ĞÅÏ¢ĞŞ¸Ä</a></b></div>
+å‘˜å·¥ä¿¡æ¯ä¿®æ”¹</a></b></div>
                 </td>
               </tr>
             </table>
@@ -207,7 +207,7 @@ Human Resource Department
                   <div align="center"><b>
 <!--Button6.Link-->
 <a href="query_employee.jsp">
-<!--Button6-->Ô±¹¤ĞÅÏ¢²éÑ¯</a></b></div>
+<!--Button6-->å‘˜å·¥ä¿¡æ¯æŸ¥è¯¢</a></b></div>
                 </td>
               </tr>
             </table>
@@ -220,7 +220,7 @@ Human Resource Department
 <!--Button6.Link-->
 <a href="../login/login_exit.jsp">
 <!--Button6-->
-ÍË³öÏµÍ³</a></b></div>
+é€€å‡ºç³»ç»Ÿ</a></b></div>
                 </td>
               </tr>
             </table>
@@ -251,19 +251,20 @@ Human Resource Department
 	}
 %>
 <jsp:useBean id="employees_page" scope="application" class="employees.EmployeesBean_Page"/>
-<table width="556" height="138" border="12">
+<table width="800" height="138" border="12">
   <tr>
-    <td colspan="8" align="center">ËùÓĞÔ±¹¤µÄ»ù±¾ĞÅÏ¢</td>
+    <td colspan="9" align="center">æ‰€æœ‰å‘˜å·¥çš„åŸºæœ¬ä¿¡æ¯</td>
   </tr>
    <tr>
-    <td width="50">Ô±¹¤±àºÅ</td>
-    <td width="70">Ô±¹¤ĞÕÃû</td>
-    <td width="43">ĞÔ±ğ</td>
-    <td width="78">¼®¹á</td>
-    <td width="49">µç»°</td>
-    <td width="36">³öÉúÄêÔÂ</td>
-	<td width="59">×¡Ö·</td>
-	<td width="75">É¾³ıÔ±¹¤</td>
+    <td width="50">å‘˜å·¥ç¼–å·</td>
+    <td width="70">å‘˜å·¥å§“å</td>
+    <td width="43">æ€§åˆ«</td>
+    <td width="78">ç±è´¯</td>
+    <td width="49">ç”µè¯</td>
+    <td width="36">å‡ºç”Ÿå¹´æœˆ</td>
+	<td width="59">ä½å€</td>
+    <td width="59">é¢éƒ¨ä¿¡æ¯</td>
+	<td width="75">æ“ä½œ</td>
   
   </tr>
  <%
@@ -279,9 +280,9 @@ Human Resource Department
 			while(rs.next() && i<pgsize) {
 			  String Sexx=rs.getString("Sex");
              if(Sexx.equals("Female"))
-              Sexx="Å®";
+              Sexx="å¥³";
                else
-              Sexx="ÄĞ";
+              Sexx="ç”·";
 %> 
 
  <tr>
@@ -291,9 +292,9 @@ Human Resource Department
     <td><%=rs.getString("Nationality")%></td>
     <td><%=rs.getString("Mobile")%></td>
     <td><%=rs.getString("Birth")%></td>
-	<td><%=rs.getString("Original")%></td>
-   
-	<td align="center"><a href="employee_delete_cfrm.jsp?EmpId=<%=rs.getString("EmpId")%>" onClick="javascript:return (linkcheck())">É¾³ı</a>
+	<td align="center"><%=rs.getString("Original")%></td>
+    <td align="center"><%=rs.getString("faceinfo")%></td>
+	<td align="center"><a href="employee_delete_cfrm.jsp?EmpId=<%=rs.getString("EmpId")%>" onClick="javascript:return (linkcheck())">åˆ é™¤</a>
 	</td>
  
   </tr>
@@ -305,28 +306,28 @@ Human Resource Department
 %>
 </table>
 <form method="get" action="employees_many_del.jsp">
-<a href="employees_many_del.jsp">·µ»Ø</a>
-¹²<%=totalpage%>Ò³&nbsp;
+<a href="employees_many_del.jsp">è¿”å›</a>
+å…±<%=totalpage%>é¡µ&nbsp;
 <%
 if(curpage>1 && totalpage>1)
-	out.print("<a href=\"employees_many_del.jsp?page="+ (curpage-1)+"\">ÉÏÒ»Ò³</a>");
+	out.print("<a href=\"employees_many_del.jsp?page="+ (curpage-1)+"\">ä¸Šä¸€é¡µ</a>");
 else
-	out.print("ÉÏÒ»Ò³");
+	out.print("ä¸Šä¸€é¡µ");
 %>&nbsp;
 <%
 if(curpage<totalpage)
-	out.print("<a href=\"employees_many_del.jsp?page="+ (curpage+1)+"\">ÏÂÒ»Ò³</a>");
+	out.print("<a href=\"employees_many_del.jsp?page="+ (curpage+1)+"\">ä¸‹ä¸€é¡µ</a>");
 else
-	out.print("ÏÂÒ»Ò³");
+	out.print("ä¸‹ä¸€é¡µ");
 %>
 
-Ìøµ½µÚ<select name="page" OnChange="document.forms[0].submit()">
+è·³åˆ°ç¬¬<select name="page" OnChange="document.forms[0].submit()">
 <script language="JavaScript">
 	for(i=1; i<=<%=totalpage%>; i++)
 		document.write("<option value="+i+">"+i+"</option>")
 	document.forms[0].page.options[<%=curpage-1%>].selected = true;
 </script>		
-	</select>Ò³
+	</select>é¡µ
 </form>
 
   
@@ -343,21 +344,7 @@ else
               <tr> 
                 <td> 
                   <div align="center"> 
-<!--Your Company Name-->
-ÈÎÏşÃ÷±ÏÒµÉè¼Æ¡ª¡ª
-<!--TCopyRight-->
- °æÈ¨ËùÓĞ
-@2006<br>
-<!--TAddress-->
-¹«Ë¾µØÖ·:YSU
-<!--Address-->
-<br>
-<!--TTelephone-->
-µç»°:
-<!--Telephone-->
-<!--TEMail-->
- µç×ÓÓÊ¼ş:ren@126.com
-<!--EMail-->
+
 <A HREF='mailto:
 <!--Email-->
 

@@ -1,4 +1,6 @@
-<%@ page contentType="text/html;charset=gb2312"%>
+
+<%@ page  contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <%@ page import="departments.*" %>
 
 <HTML>
@@ -10,7 +12,7 @@
 Template
 </TITLE>
 <!--CharSet-->
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 <link rel="stylesheet" href="Departments_images/CSS.CSS" type="text/css">
 <style type="text/css">
 <!--
@@ -31,13 +33,13 @@ function checkvalue()
 	var mainform = document.forms["main"];
 	if( mainform.DepId.value.length==0 )
 	{
-		alert( "ÇëÊäÈë²¿ÃÅµÄ±àºÅ£¡" );
+		alert( "è¯·è¾“å…¥éƒ¨é—¨çš„ç¼–å·ï¼" );
 		mainform.DepId.focus();
 		return false;
 	}
 	if( mainform.DepName.value.length==0 )
 	{
-		alert( "ÇëÊäÈë²¿ÃÅµÄÃû³Æ£¡" );
+		alert( "è¯·è¾“å…¥éƒ¨é—¨çš„åç§°ï¼" );
 		mainform.DepName.focus();
 		return false;
 	}
@@ -61,7 +63,7 @@ function checkvalue()
           <td height="30" width="408"> 
             <div align="center"><font color="#FFFFFF"><b><font size="5">
 <!--Your Company Name-->
-ÆóÒµÈËÁ¦×ÊÔ´²¿¡ª¡ªÈËÊÂ²¿ 
+ä¼ä¸šäººåŠ›èµ„æºéƒ¨â€•â€•äººäº‹éƒ¨ 
               </font></b></font></div>
           </td>
           <td height="30" width="170">&nbsp;</td>
@@ -102,7 +104,7 @@ Human Resource Department
 
 <a href="../menu_index/personnael_department_index.jsp">
 
-Ê×Ò³</a></b> </div></td>
+é¦–é¡µ</a></b> </div></td>
               </tr>
             </table>
 
@@ -114,7 +116,7 @@ Human Resource Department
 <!--Button1.Link-->
 <a href="Departments_index.jsp">
 <!--Button1-->
-ÈËÊÂ²¿ÃÅĞÅÏ¢¹ÜÀí</a></b> </div>
+äººäº‹éƒ¨é—¨ä¿¡æ¯ç®¡ç†</a></b> </div>
                 </td>
               </tr>
             </table>
@@ -128,7 +130,7 @@ Human Resource Department
 <!--Button2.Link-->
 <a href="Departments_index.jsp">
 <!--Button2-->
-ËùÓĞ²¿ÃÅĞÅÏ¢ </a></b></div>
+æ‰€æœ‰éƒ¨é—¨ä¿¡æ¯ </a></b></div>
                 </td>
               </tr>
             </table>
@@ -142,7 +144,7 @@ Human Resource Department
 <!--Button3.Link-->
 <a href="Departments_add.jsp">
 <!--Button3-->
-²¿ÃÅĞÅÏ¢Ìí¼Ó </a></b></div>
+éƒ¨é—¨ä¿¡æ¯æ·»åŠ  </a></b></div>
                 </td>
               </tr>
             </table>
@@ -156,7 +158,7 @@ Human Resource Department
 <!--Button4.Link-->
 <a href="Departments_del.jsp">
 <!--Button4-->
-²¿ÃÅĞÅÏ¢É¾³ı </a></b></div>
+éƒ¨é—¨ä¿¡æ¯åˆ é™¤ </a></b></div>
                 </td>
               </tr>
             </table>
@@ -170,7 +172,7 @@ Human Resource Department
 <!--Button5.Link-->
 <a href="Departments_all_edit.jsp">
 <!--Button5-->
-²¿ÃÅĞÅÏ¢ĞŞ¸Ä</a></b></div>
+éƒ¨é—¨ä¿¡æ¯ä¿®æ”¹</a></b></div>
                 </td>
               </tr>
             </table>
@@ -183,7 +185,7 @@ Human Resource Department
                   <div align="center"><b>
 <!--Button6.Link-->
 <a href="../login/login_exit.jsp">
-<!--Button6-->ÍË³öÏµÍ³</a></b></div>
+<!--Button6-->é€€å‡ºç³»ç»Ÿ</a></b></div>
                 </td>
               </tr>
             </table>
@@ -208,28 +210,28 @@ Human Resource Department
 <form id="form1" name="main" method="post" action="Departments_add_result.jsp" >
 <table width="352" height="135" border="12" align="center" cellspacing="1">
   <tr>
-    <td colspan="2"><div align="center" class="style1">²¿ÃÅ»ù±¾ĞÅÏ¢µÄÌí¼Ó</div></td>
+    <td colspan="2"><div align="center" class="style1">éƒ¨é—¨åŸºæœ¬ä¿¡æ¯çš„æ·»åŠ </div></td>
   </tr>
   <tr>
-    <td width="149" height="40">²¿ÃÅ±àºÅ£º</td>
+    <td width="149" height="40">éƒ¨é—¨ç¼–å·ï¼š</td>
     <td width="275">
         <input type="text" name="DepId" onKeyUp="this.value=this.value.replace(/[^\d]/g,'')" onpaste="return false" />
     </td>
   </tr>
   <tr>
-    <td height="40" class="style2">²¿ÃÅÃû³Æ£º</td>
+    <td height="40" class="style2">éƒ¨é—¨åç§°ï¼š</td>
     <td><input type="text" name="DepName" />
 	</td>
   </tr>
   <tr>
     <td>
     
-        <input type="submit" name="Submit" value="Ìá½»"onclick="javascript:return (checkvalue());" />
+        <input type="submit" name="Submit" value="æäº¤"onclick="javascript:return (checkvalue());" />
         
     
     </td>
     <td>
-      <input type="reset" name="Submit2" value="ÖØÌî" />
+      <input type="reset" name="Submit2" value="é‡å¡«" />
    </td>
   </tr>
 </table>
@@ -247,19 +249,19 @@ Human Resource Department
                 <td> 
                   <div align="center"> 
 <!--Your Company Name-->
-ÈÎÏşÃ÷±ÏÒµÉè¼Æ¡ª¡ª
+ä»»æ™“æ˜æ¯•ä¸šè®¾è®¡â€•â€•
 <!--TCopyRight-->
- °æÈ¨ËùÓĞ
+ ç‰ˆæƒæ‰€æœ‰
 @2002<br>
 <!--TAddress-->
-¹«Ë¾µØÖ·:YSU
+å…¬å¸åœ°å€:YSU
 <!--Address-->
 <br>
 <!--TTelephone-->
-µç»°:
+ç”µè¯:
 <!--Telephone-->
 <!--TEMail-->
- µç×ÓÓÊ¼ş:REN@126.com
+ ç”µå­é‚®ä»¶:REN@126.com
 <!--EMail-->
 <A HREF='mailto:
 <!--Email-->

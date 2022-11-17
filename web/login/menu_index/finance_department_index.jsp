@@ -109,7 +109,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
                 <td> 
                   <div align="center"><b>
 <!--Button1.Link-->
-<a href="../salary/salary_all_infor_page.jsp">
+<a href="../../salary/salary_all_infor_page.jsp">
 <!--Button1-->
 工资信息管理</a></b> </div>
                 </td>
@@ -123,7 +123,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
                 <td> 
                   <div align="center"><b>
 <!--Button2.Link-->
-<a href="../checkout/checkout.jsp">
+<a href="../../checkout/checkout.jsp">
 <!--Button2-->
 商品销售业绩 </a></b></div>
                 </td>
@@ -137,7 +137,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
                 <td> 
                   <div align="center"><b>
 <!--Button3.Link-->
-<a href="../purchase/purchase_all_infor_page_money.jsp">
+<a href="../../purchase/purchase_all_infor_page_money.jsp">
 <!--Button3-->
 商品采购费用 </a></b></div>
                 </td>
@@ -151,7 +151,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
                 <td> 
                   <div align="center"><b>
 <!--Button3.Link-->
-<a href="../login/index_all.jsp">
+<a href="../index_all.jsp">
 <!--Button3-->
 超级管理页面 </a></b></div>
                 </td>
@@ -165,7 +165,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
                 <td> 
                   <div align="center"><b>
 <!--Button4.Link-->
-<a href="../login/login_update_query.jsp">
+<a href="../login_update_query.jsp">
 <!--Button4-->
 修改密码 </a></b></div>
                 </td>
@@ -179,7 +179,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
                 <td> 
                   <div align="center"><b>
 <!--Button5.Link-->
-<a href="../login/login_exit.jsp">
+<a href="../login_exit.jsp">
 <!--Button5-->
 退出系统</a></b></div>
                 </td>
@@ -223,21 +223,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
               <tr> 
                 <td> 
                   <div align="center"> 
-<!--Your Company Name-->
-任晓明毕业设计——
-<!--TCopyRight-->
- 版权所有
-@2006<br>
-<!--TAddress-->
-公司地址:ysu
-<!--Address-->
-<br>
-<!--TTelephone-->
-电话:
-<!--Telephone-->
-<!--TEMail-->
- 电子邮件:ren@126.com
-<!--EMail-->
+
 <A HREF='mailto:
 <!--Email-->
 

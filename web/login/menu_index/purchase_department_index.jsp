@@ -120,7 +120,7 @@ Enterprise Purchase Department
                 <td> 
                   <div align="center"><b>
 <!--Button2.Link-->
-<a href="../protype/protype_all.jsp">
+<a href="../../protype/protype_all.jsp">
 <!--Button2-->
  
  商品类型信息管理</a></b></div>
@@ -135,7 +135,7 @@ Enterprise Purchase Department
                 <td> 
                   <div align="center"><b>
 <!--Button3.Link-->
-<a href="../product/product_index.jsp">
+<a href="../../product/product_index.jsp">
 <!--Button3-->
 商品详细信息管理</a></b></div>
                 </td>
@@ -149,7 +149,7 @@ Enterprise Purchase Department
                 <td> 
                   <div align="center"><b>
 <!--Button4.Link-->
-<a href="../supplyer/supplyer_all_infor_page.jsp">
+<a href="../../supplyer/supplyer_all_infor_page.jsp">
 <!--Button4-->
 供应商厂家管理</a></b></div>
                 </td>
@@ -163,7 +163,7 @@ Enterprise Purchase Department
                 <td> 
                   <div align="center"><b>
 <!--Button5.Link-->
-<a href="../saler/saler_all_infor_page.jsp">
+<a href="../../saler/saler_all_infor_page.jsp">
 <!--Button5-->采购联系人管理</a></b></div>
                 </td>
               </tr>
@@ -176,7 +176,7 @@ Enterprise Purchase Department
                 <td> 
                   <div align="center"><b>
 <!--Button6.Link-->
-<a href="../purchase/purchase_all_infor_page.jsp">
+<a href="../../purchase/purchase_all_infor_page.jsp">
 <!--Button6-->
 采购信息管理</a></b></div>
                 </td>
@@ -190,7 +190,7 @@ Enterprise Purchase Department
                 <td> 
                   <div align="center"><b>
 <!--Button6.Link-->
-<a href="../login/index_all.jsp">
+<a href="../index_all.jsp">
 <!--Button6-->
 系统超级管理</a></b></div>
                 </td>
@@ -207,7 +207,7 @@ Enterprise Purchase Department
                 <td> 
                   <div align="center"><b>
 <!--Button7.Link-->
-<a href="../login/login_update_query.jsp">
+<a href="../login_update_query.jsp">
 <!--Button7-->修改密码</a></b></div>
                 </td>
               </tr>
@@ -219,7 +219,7 @@ Enterprise Purchase Department
                 <td> 
                   <div align="center"><b>
 <!--Button7.Link-->
-<a href="../login/login_exit.jsp">
+<a href="../login_exit.jsp">
 <!--Button7-->退出系统</a></b></div>
                 </td>
               </tr>

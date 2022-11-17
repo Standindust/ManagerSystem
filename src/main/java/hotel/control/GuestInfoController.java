@@ -1,8 +1,5 @@
 package hotel.control;
 
-import java.io.*;
-import java.util.ArrayList;
-
 import hotel.model.Beifen;
 import hotel.model.guest;
 import hotel.model.guestIn;
@@ -11,6 +8,9 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class GuestInfoController extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -22,7 +22,20 @@ public class GuestInfoController extends HttpServlet {
 		System.out.println(request.getServletPath());
 		request.setCharacterEncoding("UTF-8");
 		String actionUrl = request.getServletPath();
-		if (actionUrl.equals("/view/register.action")) {
+		if(actionUrl.equals("registeremp.action")){
+
+		}else if (actionUrl.equals("/view/opencam.action")) {
+			FaceCollection faceCollection=new FaceCollection();
+			request.getRequestDispatcher("/view/index.jsp").forward(request, response);
+			try {
+
+				faceCollection.identyAll();
+
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		}
+		else if (actionUrl.equals("/view/register.action")) {
 			// 获取参数
 			String roomType = request.getParameter("roomType");
 			String guestId = request.getParameter("guestId");
@@ -58,7 +71,7 @@ public class GuestInfoController extends HttpServlet {
 			int r = bf.backup();
 			FaceCollection faceCollection=new FaceCollection();
 			try {
-				faceCollection.active(String.valueOf(in.getRoomNumber()),in.getGuestId(),"guest");
+				faceCollection.collect(String.valueOf(in.getRoomNumber()),in.getGuestId(),"guest.guest");
 				in.SetFace(1);
 			} catch (Exception e) {
 				throw new RuntimeException(e);
@@ -68,6 +81,7 @@ public class GuestInfoController extends HttpServlet {
 			if (result == 1 && resultIn == 1 && r == 1) {
 				request.getRequestDispatcher("/view/regSuccess.html").forward(request, response);
 				try {
+
 					faceCollection.train(String.valueOf(in.getRoomNumber()));
 					faceCollection.trainall();
 				} catch (Exception e) {
@@ -137,9 +151,9 @@ public class GuestInfoController extends HttpServlet {
 			int r2 = bf2.backup();
 			FaceCollection faceCollection=new FaceCollection();
 			try {
-				faceCollection.active(String.valueOf(in1.getRoomNumber()),in1.getGuestId(),"guest");
+				faceCollection.collect(String.valueOf(in1.getRoomNumber()),in1.getGuestId(),"guest.guest");
 				in1.SetFace(1);
-				faceCollection.active(String.valueOf(in2.getRoomNumber()),in2.getGuestId(),"guest");
+				faceCollection.collect(String.valueOf(in2.getRoomNumber()),in2.getGuestId(),"guest.guest");
 				in2.SetFace(1);
 			} catch (Exception e) {
 				throw new RuntimeException(e);
@@ -167,7 +181,7 @@ public class GuestInfoController extends HttpServlet {
 		else if (actionUrl.equals("/view/check.action")) {
 			request.getRequestDispatcher("/view/findInUsed.jsp").forward(request, response);
 
-		} else if (actionUrl.equals("/checkName.action")) {
+		} else if (actionUrl.equals("/view/checkName.action")) {
 			String username = request.getParameter("r");
 			if (username.equals("标单")) {
 				ArrayList<room> list = room.getStanderSingleRoomList();

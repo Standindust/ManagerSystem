@@ -36,7 +36,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
 {
     session.removeAttribute("UserName");
     session.removeAttribute("UserType");
-	response.sendRedirect("../login/index.jsp");
+	response.sendRedirect("login/index.jsp");
 	//超级管理员页面
 }
 %>

@@ -48,7 +48,7 @@ import="java.sql.*"
 	  db.close();
 	  %>
 	  
-	</table><a href="../index.jsp">返回主页</a>
+	</table><a href="index.jsp">返回主页</a>
   </center> 
   </form>
 

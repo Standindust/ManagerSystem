@@ -131,7 +131,7 @@ public class EmployeesBean
 /////nsertEmployees 插入员工的信息
    public int InsertEmployees(String EmpId,String EmpName,String Sex,String Nationality,String Birth,
                               String Academic,String Marital,String Original,String Id_Card,
-                               String Mobile,String Memo,String DepId)  throws   Exception
+                               String Mobile,String Memo,String DepId,String faceinfo)  throws   Exception
               
     {
         
@@ -152,11 +152,11 @@ public class EmployeesBean
             }
          else
            {
-               sql="insert into Employees(EmpId,EmpName,Sex,Nationality,Birth,Academic,Marital,Original,Id_Card,Mobile,Memo,DepId)VALUES('"
+               sql="insert into Employees(EmpId,EmpName,Sex,Nationality,Birth,Academic,Marital,Original,Id_Card,Mobile,Memo,DepId,faceinfo)VALUES('"
                    +EmpId+"','"+EmpName+"','"+Sex+"','"+Nationality+"','"+Birth+"','"+Academic+"','"+Marital+"','"
-                   +Original+"','"+Id_Card+"','"+Mobile+"','"+Memo+"','"+DepId+"')";
+                   +Original+"','"+Id_Card+"','"+Mobile+"','"+Memo+"','"+DepId+"','"+faceinfo+"')";
                nResult = Stmt.executeUpdate(sql); 
-               sql= "insert into Users(UserId,UserName,PassWords)values('"+EmpId+"','"+EmpName+"','"+666666+"')"; 
+               sql= "insert into Users(UserId,UserName,PassWords)values('"+EmpId+"','"+EmpName+"','"+123456+"')";
                 nResult = Stmt.executeUpdate(sql);
            }
              return nResult;

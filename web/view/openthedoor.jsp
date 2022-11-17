@@ -23,10 +23,10 @@
             {out.println("<script language='javaScript'> " +
                     "alert('开门成功，点击确定后自动跳到主页！');</script>");
 
-                response.setHeader("refresh","1;url=../index.jsp");
+                response.setHeader("refresh","1;url=index.jsp");
             }else {out.println("<script language='javaScript'> " +
             "alert('开门失败，点击确定后自动跳到主页！');</script>");
-            response.setHeader("refresh","1;url=../index.jsp");
+            response.setHeader("refresh","1;url=index.jsp");
     }
 
         %>

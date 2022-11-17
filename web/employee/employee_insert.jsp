@@ -1,4 +1,5 @@
-<%@ page contentType="text/html; charset=gb2312" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page contentType="text/html;charset=UTF-8"  pageEncoding="UTF-8"%>
 
 <HTML>
 
@@ -9,7 +10,7 @@
 Template
 </TITLE>
 <!--CharSet-->
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 <link rel="stylesheet" href="employee_images/CSS.CSS" type="text/css">
 <style type="text/css">
 <!--
@@ -31,58 +32,59 @@ function checkvalue()
 	var mainform = document.forms["main"];
 	if( mainform.EmpId.value.length==0 )
 	{
-		alert( "ÇëÊäÈëÔ±¹¤±àºÅ£¡" );
+		alert( "è¯·è¾“å…¥å‘˜å·¥ç¼–å·ï¼" );
 		mainform.EmpId.focus();
 		return false;
 	}
 	if( mainform.EmpName.value.length==0 )
 	{
-		alert( "ÇëÊäÈëÔ±¹¤ĞÕÃû£¡" );
+		alert( "è¯·è¾“å…¥å‘˜å·¥å§“åï¼" );
 		mainform.EmpName.focus();
 		return false;
 	}
 	if( mainform.Nationality.value.length==0 )
 	{
-		alert( "ÇëÊäÈëÔ±¹¤µÄ¼®¹á£¡" );
+		alert( "è¯·è¾“å…¥å‘˜å·¥çš„ç±è´¯ï¼" );
 		mainform.Nationality.focus();
 		return false;
 	}
    if( mainform.Birth.value.length==0 )
 	{
-		alert( "ÇëÊäÈëÔ±¹¤µÄ³öÉúÄêÔÂÈÕ£¡" );
+		alert( "è¯·è¾“å…¥å‘˜å·¥çš„å‡ºç”Ÿå¹´æœˆæ—¥ï¼" );
 		mainform.Birth.focus();
 		return false;
 	}
   if( mainform.Academic.value.length==0 )
 	{
-		alert( "ÇëÊäÈëÔ±¹¤µÄÑ§Àú£¡" );
+		alert( "è¯·è¾“å…¥å‘˜å·¥çš„å­¦å†ï¼" );
 		mainform.Academic.focus();
 		return false;
 	}
 	if( mainform.Original.value.length==0 )
 	{
-		alert( "ÇëÊäÈëÔ±¹¤µÄ×¡Ö·£¡" );
+		alert( "è¯·è¾“å…¥å‘˜å·¥çš„ä½å€ï¼" );
 		mainform.Original.focus();
 		return false;
 	}
 	if( mainform.Mobile.value.length==0 )
 	{
-		alert( "ÇëÊäÈëÔ±¹¤µÄÁªÏµµç»°£¡" );
+		alert( "è¯·è¾“å…¥å‘˜å·¥çš„è”ç³»ç”µè¯ï¼" );
 		mainform.Mobile.focus();
 		return false;
 	}
 	if( mainform.Id_Card.value.length==0 )
 	{
-		alert( "ÇëÊäÈëÔ±¹¤µÄÉí·İÖ¤ºÅÂë£¡" );
+		alert( "è¯·è¾“å…¥å‘˜å·¥çš„èº«ä»½è¯å·ç ï¼" );
 		mainform.Id_Card.focus();
 		return false;
 	}
 	if( mainform.Memo.value.length==0 )
 	{
-		alert( "ÇëÊäÈëÔ±¹¤µÄÃèÊö£¡" );
+		alert( "è¯·è¾“å…¥å‘˜å·¥çš„æè¿°ï¼" );
 		mainform.Memo.focus();
 		return false;
 	}
+
 	return true;
 }
 
@@ -95,8 +97,8 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
 {
     session.removeAttribute("UserName");
     session.removeAttribute("UserType");
-	response.sendRedirect("../login/index.jsp");
-	//³¬¼¶¹ÜÀíÔ±Ò³Ãæ
+	response.sendRedirect("login/index.jsp");
+	//è¶…çº§ç®¡ç†å‘˜é¡µé¢
 }
 %>
 
@@ -117,7 +119,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
           <td height="30" width="408"> 
             <div align="center"><font color="#FFFFFF"><b><font size="5">
 <!--Your Company Name-->
-ÆóÒµÈËÁ¦×ÊÔ´²¿¡ª¡ªÔ±¹¤ĞÅÏ¢¹ÜÀí 
+ä¼ä¸šäººåŠ›èµ„æºéƒ¨â€•â€•å‘˜å·¥ä¿¡æ¯ç®¡ç† 
               </font></b></font></div>
           </td>
           <td height="30" width="170">&nbsp;</td>
@@ -158,7 +160,7 @@ Human Resource Department
 
 <a href="../menu_index/personnael_department_index.jsp">
 
-Ê×Ò³</a></b> </div></td>
+é¦–é¡µ</a></b> </div></td>
               </tr>
             </table>
 
@@ -170,7 +172,7 @@ Human Resource Department
 <!--Button1.Link-->
 <a href="../menu_index/personnael_department_index.jsp">
 <!--Button1-->
-ÈËÊÂ²¿ĞÅÏ¢¹ÜÀí</a></b> </div>
+äººäº‹éƒ¨ä¿¡æ¯ç®¡ç†</a></b> </div>
                 </td>
               </tr>
             </table>
@@ -184,7 +186,7 @@ Human Resource Department
 <!--Button2.Link-->
 <a href="employees_all_infor_page.jsp">
 <!--Button2-->
-ËùÓĞÔ±¹¤ĞÅÏ¢ </a></b></div>
+æ‰€æœ‰å‘˜å·¥ä¿¡æ¯ </a></b></div>
                 </td>
               </tr>
             </table>
@@ -198,7 +200,7 @@ Human Resource Department
 <!--Button3.Link-->
 <a href="employee_insert.jsp">
 <!--Button3-->
-Ô±¹¤ĞÅÏ¢Ìí¼Ó </a></b></div>
+å‘˜å·¥ä¿¡æ¯æ·»åŠ  </a></b></div>
                 </td>
               </tr>
             </table>
@@ -212,7 +214,7 @@ Human Resource Department
 <!--Button4.Link-->
 <a href="employee_delete.jsp">
 <!--Button4-->
-µ¥¸öÔ±¹¤É¾³ı </a></b></div>
+å•ä¸ªå‘˜å·¥åˆ é™¤ </a></b></div>
                 </td>
               </tr>
             </table>
@@ -225,7 +227,7 @@ Human Resource Department
 <!--Button4.Link-->
 <a href="employees_many_del.jsp">
 <!--Button4-->
-Ô±¹¤ÅúÁ¿É¾³ı </a></b></div>
+å‘˜å·¥æ‰¹é‡åˆ é™¤ </a></b></div>
                 </td>
               </tr>
             </table>
@@ -239,7 +241,7 @@ Human Resource Department
 <!--Button5.Link-->
 <a href="employee_update.jsp">
 <!--Button5-->
-Ô±¹¤ĞÅÏ¢ĞŞ¸Ä</a></b></div>
+å‘˜å·¥ä¿¡æ¯ä¿®æ”¹</a></b></div>
                 </td>
               </tr>
             </table>
@@ -251,7 +253,7 @@ Human Resource Department
                   <div align="center"><b>
 <!--Button6.Link-->
 <a href="query_employee.jsp">
-<!--Button6-->Ô±¹¤ĞÅÏ¢²éÑ¯</a></b></div>
+<!--Button6-->å‘˜å·¥ä¿¡æ¯æŸ¥è¯¢</a></b></div>
                 </td>
               </tr>
             </table>
@@ -264,7 +266,7 @@ Human Resource Department
 <!--Button6.Link-->
 <a href="../login/login_exit.jsp">
 <!--Button6-->
-ÍË³öÏµÍ³</a></b></div>
+é€€å‡ºç³»ç»Ÿ</a></b></div>
                 </td>
               </tr>
             </table>
@@ -290,114 +292,114 @@ Human Resource Department
 <form id="form1" name="main" method="post" action="employee_insert_cfrm.jsp">
 <table width="536" height="514" border="12" >
   <tr>
-    <td colspan="2" align="center">&nbsp;  Ìí¼ÓÔ±¹¤ĞÅÏ¢  </td>
+    <td colspan="2" align="center">&nbsp;  æ·»åŠ å‘˜å·¥ä¿¡æ¯  </td>
     </tr>
   <tr>
-    <td width="121">Ô±¹¤±àºÅ</td>
+    <td width="121">å‘˜å·¥ç¼–å·</td>
     <td width="377">
       <input type="text" name="EmpId"  />    </td>
   </tr>
   <tr>
-    <td>Ô±¹¤ĞÕÃû</td>
+    <td>å‘˜å·¥å§“å</td>
     <td>
       <input type="text" name="EmpName" />   </td>
   </tr>
   <tr>
-    <td>²¿ÃÅ</td>
+    <td>éƒ¨é—¨</td>
+
     <td>
-      <select name="bumen" size="1" id="select" >
-        <option value="1">ÈËÁ¦×ÊÔ´²¿</option>
-		<option  value="2">ÉÌÆ·ÏúÊÛ²¿</option>
-        <option value="3">ÉÌÆ·²É¹º²¿</option>
-		<option  value="4">¹«Ë¾²ÆÎñ²¿</option>
-		<option  value="5">ÆóÒµ¹æ»®²¿</option>
-	    <option  value="6">ÆóÒµÆäËû²¿ÃÅ</option>
-      </select>
+
+        <jsp:useBean id="db" class="hotel.model.DBBean" scope="page"/>
+        <%
+            String s="SELECT * FROM hotel.departments;";
+
+            ResultSet rs=db.executeQuery(s);
+            int i=1;String a="";
+            %>
+        <select name="bumen" size="1" id="select">
+
+
+        <option value="1"> <%rs.next();out.println(rs.getString(2));rs.next(); %> </option>
+            <option value="2"> <%out.println(rs.getString(2));rs.next(); %></option>
+            <option value="3"> <%out.println(rs.getString(2));rs.next(); %></option>
+            <option value="4"> <%out.println(rs.getString(2));rs.next();
+            rs.close();
+            db.close(); %></option>
+
+
+        </select>
     </td>
-  <tr>
-    <td>ĞÔ±ğ</td>
-    <td><input type="radio" name="Sex" value="Male" checked>ÄĞ 
-         <input type="radio" name="Sex" value="Female">Å®&nbsp;</td>
   </tr>
   <tr>
-    <td>ÊÇ·ñ½á»é</td>
+    <td>æ€§åˆ«</td>
+    <td><input type="radio" name="Sex" value="ç”·" checked>ç”·
+         <input type="radio" name="Sex" value="å¥³">å¥³&nbsp;</td>
+  </tr>
+  <tr>
+    <td>æ˜¯å¦ç»“å©š</td>
     <td>
-     <input type="radio" name="Marital" value="Mar" checked>ÊÇ 
-         <input type="radio" name="Marital" value="Nomar">·ñ</td>
+     <input type="radio" name="Marital" value="Mar" checked>æ˜¯
+         <input type="radio" name="Marital" value="Nomar">å¦</td>
   </tr>
   <tr>
-    <td>¼®¹á</td>
+    <td>ç±è´¯</td>
     <td>
       <input type="text" name="Nationality" />   </td>
   </tr>
   <tr>
-    <td>³öÉúÄêÔÂ</td>
+    <td>å‡ºç”Ÿå¹´æœˆ</td>
     <td>
       <input type="text" name="Birth" />  </td>
   </tr>
   <tr>
-    <td>Ñ§Àú</td>
+    <td>å­¦å†</td>
     <td>
       <input type="text" name="Academic"/>   </td>
   </tr>
   <tr>
-    <td>µØÖ·</td>
+    <td>åœ°å€</td>
     <td>
       <input type="text" name="Original"/>    </td>
   </tr>
   <tr>
-    <td>µç»°</td>
+    <td>ç”µè¯</td>
     <td>
       <input type="text" name="Mobile"/>    </td>
   </tr>
   <tr>
-    <td>Éí·İÖ¤ºÅÂë</td>
+    <td>èº«ä»½è¯å·ç </td>
     <td>
       <input type="text" name="Id_Card"/>   </td>
   </tr>
   <tr>
-    <td>¸öÈËÃèÊö</td>
+    <td>ä¸ªäººæè¿°</td>
     <td>
       <textarea name="Memo" cols="45" rows="6"></textarea>  </td>
   </tr>
-  
+
     <tr>
-    <td>&nbsp; <input type="submit" name="add" value="Ìí¼Ó" onClick="javascript:return (checkvalue());" /></td>
-    <td>&nbsp;<input name="Submit2" type="reset" value="Çå³ı" /></td>
+    <td>&nbsp; <input type="submit" name="add" value="æ·»åŠ å¹¶ç™»è®°é¢éƒ¨ä¿¡æ¯" onClick="javascript:return (checkvalue());" /></td>
+    <td>&nbsp;<input name="Submit2" type="reset" value="æ¸…é™¤" /></td>
   </tr>
 </table>
 </form>
 
 
-  
-		   
-		   
+
+
+
 <!--IndexPage.Content.Begin-->
 <!--IndexPage.Content.End-->
 <table width="90%" border="0" cellspacing="0" cellpadding="0" align="center" height="1">
-              <tr> 
+              <tr>
                 <td bgcolor="#000000"> </td>
               </tr>
             </table>
             <table width="90%" border="0" cellspacing="0" cellpadding="4" align="center">
-              <tr> 
-                <td> 
-                  <div align="center"> 
-<!--Your Company Name-->
-ÈÎÏşÃ÷±ÏÒµÉè¼Æ¡ª¡ª
-<!--TCopyRight-->
- °æÈ¨ËùÓĞ
-@2006<br>
-<!--TAddress-->
-¹«Ë¾µØÖ·:YSU
-<!--Address-->
-<br>
-<!--TTelephone-->
-µç»°:
-<!--Telephone-->
-<!--TEMail-->
- µç×ÓÓÊ¼ş:ren@126.com
-<!--EMail-->
+              <tr>
+                <td>
+                  <div align="center">
+
 <A HREF='mailto:
 <!--Email-->
 

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=gb2312" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.*" %>
 <%@ page import="employees.*" %>
 <%@ page import="java.util.Properties" %>
@@ -6,7 +6,7 @@
 <%!
    public String convert(String s){
     try{
-     	return new String(s.getBytes("Gb2312"),"GB2312");
+     	return new String(s.getBytes("UTF-8"),"UTF-8");
     }catch(Exception e){return null;}
    }
 %>

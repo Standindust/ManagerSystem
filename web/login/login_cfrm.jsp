@@ -1,5 +1,5 @@
-<%@ page contentType="text/html;charset=gb2312"%>
-<%@ page import="com.ideals.util.*" %>
+<%@ page pageEncoding="UTF-8" contentType="text/html;charset=UTF-8"%>
+
 <%@ page import="java.util.*" %>
 <%@ page import="login.*" %>
 
@@ -13,7 +13,7 @@
 Template
 </TITLE>
 <!--CharSet-->
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8>
 <link rel="stylesheet" href="images/CSS.CSS" type="text/css">
 <style type="text/css">
 <!--
@@ -34,19 +34,19 @@ function checkvalue()
 	var mainform = document.forms["form1"];
 	if( mainform.UserName.value.length==0 )
 	{
-		alert( "ÇëÊäÈëÄúµÄÓÃ»§Ãû£¡" );
+		alert( "è¯·è¾“å…¥æ‚¨çš„ç”¨æˆ·åï¼" );
 		mainform.UserName.focus();
 		return false;
 	}
 	if( mainform.PassWords.value.length==0 )
 	{
-		alert( "ÇëÊäÈëÄúµÄÃÜÂë£¡" );
+		alert( "è¯·è¾“å…¥æ‚¨çš„å¯†ç ï¼" );
 		mainform.PassWords.focus();
 		return false;
 	}
 		if( mainform.Password_cfrm.value.length==0 )
 	{
-		alert( "ÇëÊäÈëÄúµÄÈ·ÈÏÃÜÂë£¡" );
+		alert( "è¯·è¾“å…¥æ‚¨çš„ç¡®è®¤å¯†ç ï¼" );
 		mainform.Password_cfrm.focus();
 		return false;
 	}
@@ -69,7 +69,7 @@ function checkvalue()
           <td height="50" width="408"> 
             <div align="center"><font color="#FFFFFF"><b><font size="5">
 <!--Your Company Name-->
-ÖĞĞÍ³¬ÊĞ¹ÜÀíÏµÍ³
+ä¸­å‹è¶…å¸‚ç®¡ç†ç³»ç»Ÿ
               </font></b></font></div>
           </td>
         </tr>
@@ -77,7 +77,7 @@ function checkvalue()
           <td height="50" width="408"> 
             <div align="center"><font size="4" color="#FFFFFF">
 <!--Your Company Name.English-->
-±ÏÒµÉè¼Æ¡ª¡ªYanShan.University 
+æ¯•ä¸šè®¾è®¡â€•â€•YanShan.University 
 </font></div>
           </td>
         </tr>
@@ -114,7 +114,7 @@ function checkvalue()
 <!--Button6.Link-->
 <a href="#">
 <!--Button6-->
-ÏµÍ³µÇÂ½
+ç³»ç»Ÿç™»é™†
 </a></b></div>
                 </td>
               </tr>
@@ -127,7 +127,7 @@ function checkvalue()
 <!--Button6.Link-->
 <a href="index.jsp">
 <!--Button6-->
-·µ»Øµ½µÇÂ½</a></b></div>
+è¿”å›åˆ°ç™»é™†</a></b></div>
                 </td>
               </tr>
             </table>
@@ -154,54 +154,14 @@ String  PassWords=request.getParameter("PassWords");
         switch(bumen)
         {
          case 1:
-			UserType="one1";
-         //   out.println("ÈËÁ¦×ÊÔ´²¿¸ºÔğÈË");
-		  //  out.println("UserType="+UserType);	  
+			UserType="one";
+
            break;	   
          case 2:  
-		   UserType="one";
-         //  out.println("ÈËÁ¦×ÊÔ´²¿Ô±¹¤");   
-		 //  out.println("UserType="+UserType);	  
+		   UserType="two";
+
            break;	   
-         case 3:	  
-		   UserType="two1";
-         //  out.println("ÉÌÆ·ÏúÊÛ²¿¸ºÔğÈË");
-		 //  out.println("UserType="+UserType);	  
-           break;
-		  case 4:
-			UserType="two";
-          //  out.println("ÉÌÆ·ÏúÊÛ²¿Ô±");
-		  //  out.println("UserType="+UserType);	  
-           break;	   
-         case 5:  
-		   UserType="three1";
-         //  out.println("ÉÌÆ·²É¹º²¿¸ºÔğÈË");   
-		 //  out.println("UserType="+UserType);	  
-           break;	   
-         case 6:	  
-		   UserType="three";
-         //  out.println("ÉÌÆ·²É¹º²¿Ô±¹¤");
-		//   out.println("UserType="+UserType);	  
-           break;
-		 case 7:
-			UserType="four1";
-         //   out.println("¹«Ë¾²ÆÎñ²¿¸ºÔğÈË");
-		 //   out.println("UserType="+UserType);	  
-           break;	   
-         case 8:  
-		   UserType="four";
-        //   out.println("¹«Ë¾²ÆÎñ²¿Ô±¹¤");   
-		 //  out.println("UserType="+UserType);	  
-           break;	   
-         case 9:	  
-		   UserType="five1";
-         //  out.println("ÆóÒµ¹æ»®¾ö²ßÈË");
-		 //  out.println("UserType="+UserType);	  
-           break;	   
-         default:
-           out.println("error");
-           break;   
-        } 
+                 }
 %>
 <jsp:useBean id="login" scope="session" class="login.LoginBean"/>
 <%
@@ -213,65 +173,23 @@ String  PassWords=request.getParameter("PassWords");
 	  
 	if( result==1 )
 	{
-	   if(UserType.equals("one1"))
-		{ 
-		 session.setAttribute("UserName",UserName); 
-		 session.setAttribute("UserType",UserType); 
-		 response.sendRedirect("../menu_index/personnael_department_index.jsp");
-		}
 	   if(UserType.equals("one"))
 		{ 
 		 session.setAttribute("UserName",UserName); 
 		 session.setAttribute("UserType",UserType); 
-		 response.sendRedirect("index_one_person.jsp");
+		 response.sendRedirect("../view/index.jsp");
 		}
-	  if(UserType.equals("two1"))
+	  if(UserType.equals("two"))
 		{ 
 		 session.setAttribute("UserName",UserName); 
 		 session.setAttribute("UserType",UserType); 
-		 response.sendRedirect("../menu_index/sale_department_index.jsp");
+		 response.sendRedirect("menu_index/personnael_department_index.jsp");
 		}
-	   if(UserType.equals("two"))
-		{ 
-		 session.setAttribute("UserName",UserName); 
-		 session.setAttribute("UserType",UserType); 
-		 response.sendRedirect("index_one_person.jsp");
-		}
-	   if(UserType.equals("three1"))
-		{ 
-		 session.setAttribute("UserName",UserName); 
-		 session.setAttribute("UserType",UserType); 
-		 response.sendRedirect("../menu_index/purchase_department_index.jsp");
-		}
-	   if(UserType.equals("three"))
-		{ 
-		 session.setAttribute("UserName",UserName); 
-		 session.setAttribute("UserType",UserType); 
-		 response.sendRedirect("index_one_person.jsp");
-		}
-	  if(UserType.equals("four1"))
-		{ 
-		 session.setAttribute("UserName",UserName); 
-		 session.setAttribute("UserType",UserType); 
-		 response.sendRedirect("../menu_index/finance_department_index.jsp");
-		}
-	   if(UserType.equals("four"))
-		{ 
-		 session.setAttribute("UserName",UserName); 
-		 session.setAttribute("UserType",UserType); 
-		 response.sendRedirect("index_one_person.jsp");
-		}
-        if(UserType.equals("five1"))
-		{
-		 session.setAttribute("UserName",UserName); 
-		 session.setAttribute("UserType",UserType); 
-		 response.sendRedirect("index_all.jsp");
-		}	  
+
 	}
 	else{
-	            session.removeAttribute("UserName");
-                session.removeAttribute("UserType");
-	            out.println( "µÇÂ¼Ê§°Ü£¡ÓÉÓÚÆäËûÔ­Òò£¡" );          
+        out.println("<script language='javaScript'> alert('ç™»é™†å¤±è´¥ï¼Œè¯·ä»”ç»†æ ¸å¯¹ä¿¡æ¯åç™»å½•');</script>");
+        response.sendRedirect("../index.jsp");
 	    }
 %>
 

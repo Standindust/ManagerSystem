@@ -45,7 +45,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
 {
     session.removeAttribute("UserName");
     session.removeAttribute("UserType");
-	response.sendRedirect("../login/login_exit.jsp");
+	response.sendRedirect("login/login_exit.jsp");
 }
 %>
 

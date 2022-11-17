@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=gb2312"%>
+<%@ page pageEncoding="UTF-8" contentType="text/html;charset=UTF-8"%>
 <HTML>
 
 <!-- Mirrored from web.hichina.com/sitemanager/templet/089/left1/ by HTTrack Website Copier/3.x [XR&CO'2003], Thu, 28 Aug 2003 00:02:02 GMT -->
@@ -8,7 +8,7 @@
 Template
 </TITLE>
 <!--CharSet-->
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 <link rel="stylesheet" href="images/CSS.CSS" type="text/css">
 <style type="text/css">
 <!--
@@ -36,13 +36,13 @@ function checkvalue()
 	var mainform = document.forms["form1"];
 	if( mainform.UserName.value.length==0 )
 	{
-		alert( "请输入您的用户名！" );
+		alert( "璇疯緭鍏ユ偍鐨勭敤鎴峰悕锛�" );
 		mainform.UserName.focus();
 		return false;
 	}
 	if( mainform.PassWords.value.length==0 )
 	{
-		alert( "请输入您的密码！" );
+		alert( "璇疯緭鍏ユ偍鐨勫瘑鐮侊紒" );
 		mainform.PassWords.focus();
 		return false;
 	}
@@ -58,16 +58,16 @@ function checkvalue()
 <table width="778" border="0" cellspacing="0" cellpadding="0" align="center" height="240">
   <tr> 
     <td width="218" height="75"><img src="images/index_top1.gif" width="218" height="75"></td>
-    <td rowspan="2" width="560" height="240" background="images/index_top2.gif" valign="top"> 
+    <td rowspan="2" width="560" height="240" background="images/index_top2.gif" valign="top">
       <table border="0" cellspacing="0" cellpadding="0" width="500" align="center">
         <tr> 
           <td height="50" width="408"> <b></b> <b></b></td>
         </tr>
         <tr> 
-          <td height="50" width="408"> 
+          <td height="50" width="408">
             <div align="center"><font color="#FFFFFF"><b><font size="5">
 <!--Your Company Name-->
-中型超市管理系统
+閰掑簵绠＄悊绯荤粺
               </font></b></font></div>
           </td>
         </tr>
@@ -75,7 +75,7 @@ function checkvalue()
           <td height="50" width="408"> 
             <div align="center"><font size="4" color="#FFFFFF">
 <!--Your Company Name.English-->
-毕业设计——YanShan.University 
+BISTU
 </font></div>
           </td>
         </tr>
@@ -112,7 +112,7 @@ function checkvalue()
 <!--Button6.Link-->
 <a href="#">
 <!--Button6-->
-系统登陆
+绯荤粺鐧婚檰
 </a></b></div>
                 </td>
               </tr>
@@ -134,38 +134,33 @@ function checkvalue()
 	<form id="form1" name="form1" method="post" action="login_cfrm.jsp">
 <table width="405" height="265" border="12" align="center" >
   <tr>
-    <td colspan="2" align="center">用户登录</td>
+    <td colspan="2" align="center">鐢ㄦ埛鐧诲綍</td>
   </tr>
   <tr>
-    <td width="181" align="center">用户姓名 </td>
+    <td width="181" align="center">鐢ㄦ埛濮撳悕 </td>
     <td width="208">  
       <input type="text" name="UserName" id="textfield" />    </td>
   </tr>
   <tr>
-    <td align="center">用户密码 </td>
+    <td align="center">鐢ㄦ埛瀵嗙爜 </td>
     <td> <input type="password" name="PassWords" id="textfield" /></td>
   </tr>
   <tr>
-    <td height="47" align="center">用户部门</td>
+    <td height="47" align="center">鐢ㄦ埛閮ㄩ棬</td>
     <td>
       <select name="bumen" size="1" id="select" >
-        <option value="1">人力资源部负责人</option>
-        <option value="2">人力资源部员工</option>
-        <option  value="3">商品销售部负责人</option>
-		<option  value="4">商品销售部员工</option>
-		<option value="5">商品采购部负责人</option>
-        <option value="6">商品采购部员工</option>
-        <option  value="7">公司财务部负责人</option>
-		<option  value="8">公司财务部员工</option>
-		<option  value="9">企业规划决策人</option>
+          <option value="1">閰掑簵瀹㈡埧鍙婂鎴风鐞�</option>
+          <option value="2">閰掑簵閮ㄩ棬浜哄姏璧勬簮绠＄悊</option>
+
+
       </select>
     </td>
   </tr>
     <tr>
     <td height="64" align="center">
-      <input type="submit" name="Submit" value="登录" id="Submit" onClick="javascript:return (checkvalue());" />
+      <input type="submit" name="Submit" value="鐧诲綍" id="Submit" onClick="javascript:return (checkvalue());" />
     </td>
-    <td align="center"><input type="reset" name="Reset" value="重填" id="Submit" />
+    <td align="center"><input type="reset" name="Reset" value="閲嶅～" id="Submit" />
       </td>
   </tr>
 </table>

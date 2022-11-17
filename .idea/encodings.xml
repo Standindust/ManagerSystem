@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/hotel/control/FaceCollection.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/hotel/control/GuestInfoController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/hotel/model/Beifen.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/hotel/model/DBBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/hotel/model/guest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/hotel/model/guestIn.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/hotel/model/room.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/view" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>

@@ -158,7 +158,7 @@ The Merchandise Sale Department
                       <td> 
                         <div align="center"><b>
 <!--Button1.Link-->
-<a href="../product/product_allinfor_page.jsp">
+<a href="../../product/product_allinfor_page.jsp">
 						<font color="#000000">
 <!--Button1-->
 商品所有信息显示                          </font></a></b></div>
@@ -178,7 +178,7 @@ The Merchandise Sale Department
                       <td> 
                         <div align="center"><b>
 <!--Button2.Link-->
-<a href="../product/product_allinfor_edit.jsp">
+<a href="../../product/product_allinfor_edit.jsp">
 						<font color="#000000">
 <!--Button2-->
 商品销售管理                          </font></a></b></div>
@@ -197,7 +197,7 @@ The Merchandise Sale Department
                       <td> 
                         <div align="center"><b>
 <!--Button3.Link-->
-<a href="../login/login_update_query.jsp">
+<a href="../login_update_query.jsp">
 						<font color="#000000">
 <!--Button3-->
 修改用户密码                          </font></a></b></div>
@@ -215,7 +215,7 @@ The Merchandise Sale Department
                       <td> 
                         <div align="center"><b>
 <!--Button3.Link-->
-<a href="../login/index_all.jsp">
+<a href="../index_all.jsp">
 						<font color="#000000">
 <!--Button3-->
 系统超级管理                          </font></a></b></div>
@@ -234,7 +234,7 @@ The Merchandise Sale Department
                       <td> 
                         <div align="center"><b>
 <!--Button4.Link-->
-<a href="../login/login_exit.jsp">
+<a href="../login_exit.jsp">
 						<font color="#000000">
 <!--Button4-->
 退出系统                          </font></a></b></div>

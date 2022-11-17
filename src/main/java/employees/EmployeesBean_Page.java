@@ -98,7 +98,7 @@ public class EmployeesBean_Page
 			
 			conn = database.getConnection();
 			st = conn.createStatement();
-			String sql = sql = "select EmpId, DepId, EmpName , Sex, Nationality, Birth, Academic, Marital,Original, Id_Card, Mobile, Memo "+"from  Employees ";   
+			String sql = sql = "select EmpId, DepId, EmpName , Sex, Nationality, Birth, Academic, Marital,Original, Id_Card, Mobile, Memo,faceinfo "+"from  Employees ";
 			sql = sql + " ORDER BY EmpId ASC";
 			rs = st.executeQuery( sql );		
 			for(int i=0; i<start; i++)

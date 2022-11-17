@@ -6,14 +6,7 @@
 </head>
 
 <body>
-<center>
-    <div class="primary_header">
-        <h1 class="title">酒店管理系统（客房部）</h1>
-    </div>
-<hr>
-  <center>
-  登记入住
-<form action="checkName.action" method="post"><tr><td align="center" name="a">房间选择：  <a>
+<form action="checkName.action" method="post">
  <select size=1 name="r" >
   <option value="标单">标准单人间</option>
   <option value="标双">标准双人间</option>

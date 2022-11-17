@@ -9,10 +9,8 @@ import="java.sql.*"
     <title>房间信息</title>
   </head>  
   <body>
-  <center>
   <h2>当前房间入住信息列表</h2>
 
-<center>
 
   	
 	<table align=center width=1200 border=1>
@@ -37,8 +35,8 @@ import="java.sql.*"
 	    +"</td><td>"+rs.getString(9)
 	    +"</td><td>"+rs.getString(10)
 	    +"</td><td>"+rs.getString(11)
-	    +"</td>"+"<td><a href='view/checkOut.jsp?id="+rs.getString(1)+"."+rs.getString(2)+"'>退房</a>&nbsp;" +
-	      "<a href='view/openthedoor.jsp?id="+rs.getString(1)+"'>开门</a>&nbsp;</td>"+
+	    +"</td>"+"<td><a href='checkOut.jsp?id="+rs.getString(1)+"."+rs.getString(2)+"'>退房</a>&nbsp;" +
+	      "<a href='openthedoor.jsp?id="+rs.getString(1)+"'>开门</a>&nbsp;</td>"+
 	      "</tr>");
 	 i++;
 	 
@@ -50,10 +48,10 @@ import="java.sql.*"
 	  rs.close();
 	  db.close();
 	  %>
-	  
+
 <%--	</table><a href="./index.jsp">返回主页</a>--%>
-  </center> 
-  </form>
+
+
 
   </body>
   

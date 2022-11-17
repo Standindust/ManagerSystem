@@ -10,16 +10,20 @@ import java.util.*;
 public class DataBase {
 
   //private ArrayList books;
-  private String dbUrl =  "jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=ManagermentDB";
-  private String dbUser = "ren";
-  private String dbPwd = "ren";
+  private String driverStr="com.mysql.cj.jdbc.Driver";
+    private String url1="jdbc:mysql://localhost:3306/hotel";
+    private String url2="?user=root&password=123456";
+    private String url3="&useUnicode=true&characterEncoding=UTF-8";
+    private String connStr=url1+url2+url3;
+    private Connection conn=null;
+    private Statement stmt=null;
 
   public DataBase() throws Exception{
-     Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+     Class.forName(driverStr);
   }
 
   public Connection getConnection()throws Exception{
-      return java.sql.DriverManager.getConnection(dbUrl,dbUser,dbPwd);
+      return java.sql.DriverManager.getConnection(connStr);
   }
 
   public void closeConnection(Connection con){

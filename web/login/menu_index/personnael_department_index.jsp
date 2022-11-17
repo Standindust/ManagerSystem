@@ -26,21 +26,21 @@ function window_onload() {
 </HEAD>
 <BODY BGCOLOR=#994D00 leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 
-<%
-if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=="" || session.getAttribute("UserType")==null || session.getAttribute("UserType")=="" )
-{
-    session.removeAttribute("UserName");
-    session.removeAttribute("UserType");
-	response.sendRedirect("login/login_exit.jsp");
-	//out.println("dengluchengong认为其二维尔维尔却无二");
-}
-%>
-<%
-  String usertype=(String)session.getAttribute("UserType");
-  if(!(usertype.equals("five1") || usertype.equals("one1")) )
- // out.println("usertype="+usertype);
-  response.sendRedirect("login/login_exit.jsp");
-%>
+<%--<%--%>
+<%--if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=="" || session.getAttribute("UserType")==null || session.getAttribute("UserType")=="" )--%>
+<%--{--%>
+<%--    session.removeAttribute("UserName");--%>
+<%--    session.removeAttribute("UserType");--%>
+<%--	response.sendRedirect("login/login_exit.jsp");--%>
+<%--	//out.println("dengluchengong认为其二维尔维尔却无二");--%>
+<%--}--%>
+<%--%>--%>
+<%--<%--%>
+<%--  String usertype=(String)session.getAttribute("UserType");--%>
+<%--  if(!(usertype.equals("five1") || usertype.equals("one1")) )--%>
+<%-- // out.println("usertype="+usertype);--%>
+<%--  response.sendRedirect("login/login_exit.jsp");--%>
+<%--%>--%>
 
 
 
@@ -109,7 +109,7 @@ Human Resource Department
                 <td> 
                   <div align="center"><b>
 <!--Button1.Link-->
-<a href="../Departments/Departments_index.jsp">
+<a href="../../Departments/Departments_index.jsp">
 <!--Button1-->
 人事部门信息管理</a></b> </div>
                 </td>
@@ -123,7 +123,7 @@ Human Resource Department
                 <td> 
                   <div align="center"><b>
 <!--Button2.Link-->
-<a href="../employee/employee_index.jsp">
+<a href="../../employee/employee_index.jsp">
 <!--Button2-->
 员工详细信息管理 </a></b></div>
                 </td>
@@ -139,7 +139,7 @@ Human Resource Department
                 <td> 
                   <div align="center"><b>
 <!--Button4.Link-->
-<a href="../evaluation/evaluation_index.jsp">
+<a href="../../evaluation/evaluation_index.jsp">
 <!--Button4-->
 员工考勤信息管理 </a></b></div>
                 </td>
@@ -155,7 +155,7 @@ Human Resource Department
                 <td> 
                   <div align="center"><b>
 <!--Button4.Link-->
-<a href="../login/index_all.jsp">
+<a href="../index_all.jsp">
 <!--Button4-->
 系统超级管理页面 </a></b></div>
                 </td>
@@ -170,7 +170,7 @@ Human Resource Department
                 <td> 
                   <div align="center"><b>
 <!--Button4.Link-->
-<a href="../login/login_update_query.jsp">
+<a href="../login_update_query.jsp">
 <!--Button4-->
 修改用户密码 </a></b></div>
                 </td>
@@ -184,7 +184,7 @@ Human Resource Department
                 <td> 
                   <div align="center"><b>
 <!--Button5.Link-->
-<a href="../login/login_exit.jsp">
+<a href="../login_exit.jsp">
 <!--Button5-->
 退出系统</a></b></div>
                 </td>
@@ -260,20 +260,7 @@ Human Resource Department
                 <td> 
                   <div align="center"> 
 <!--Your Company Name-->
-任晓明毕业设计——
-<!--TCopyRight-->
- 版权所有
-@2006<br>
-<!--TAddress-->
-公司地址:YSU
-<!--Address-->
-<br>
-<!--TTelephone-->
-电话:
-<!--Telephone-->
-<!--TEMail-->
- 电子邮件:ren@126.com
-<!--EMail-->
+
 <A HREF='mailto:
 <!--Email-->
 

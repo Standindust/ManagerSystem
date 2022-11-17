@@ -106,7 +106,7 @@ if ( session.getAttribute("UserName")==null || session.getAttribute("UserName")=
 {
     session.removeAttribute("UserName");
     session.removeAttribute("UserType");
-	response.sendRedirect("../login/index.jsp");
+	response.sendRedirect("login/index.jsp");
 	//超级管理员页面
 }
 %>
@@ -463,21 +463,7 @@ else
               <tr> 
                 <td> 
                   <div align="center"> 
-<!--Your Company Name-->
-任晓明毕业设计——
-<!--TCopyRight-->
- 版权所有
-@2006<br>
-<!--TAddress-->
-公司地址:YSU
-<!--Address-->
-<br>
-<!--TTelephone-->
-电话:
-<!--Telephone-->
-<!--TEMail-->
- 电子邮件:ren@126.com
-<!--EMail-->
+
 <A HREF='mailto:
 <!--Email-->
 
